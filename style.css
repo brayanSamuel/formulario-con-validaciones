@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(paisaje2.jpg) no-repeat center top;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.register {
+    width: 400px;
+    background: #243032;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 25px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info {
+    width: 100%;
+    background: #24303C;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.register .select {
+    width: 100%;
+    background: #1f53c5;
+    border-radius: 10px 0px 10px 0px;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.register label {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 3x;
+    line-height: 30px;
+}
+
+.register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border-radius: 10px 0px 10px 0px;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.register .botons:hover {
+    background: #1889DB;
+    transition: .6s;
+}
