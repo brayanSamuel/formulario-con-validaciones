@@ -19,10 +19,46 @@
 
         <form action="formulario.php" method="POST">
             <h4>Formulario votación</h4>
-            <input class="info" type="text" name="nombre" id="nombres" placeholder="Nombre completo" required>
-            <input class="info" type="text" name="alias" id="Alias" placeholder="Ingrese su Alias"> 
+            <!--Grupo Nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <div class="formulario__grupo-input">
+                    <input class="info formulario__input" type="text" name="nombre" id="nombres" placeholder="Nombre completo" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">el nombre puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+
+            <!--Grupo Alias-->
+            <div class="formulario__grupo" id="grupo__alias">
+                <div class="formulario__grupo-input">
+                    <input class="info formulario__input" type="text" name="alias" id="alias" placeholder="ingrese su alias" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">el alias puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+
+            <!--Grupo Rut-->
+            <div class="formulario__grupo" id="grupo__rut">
+                <div class="formulario__grupo-input">
+                    <input class="info formulario__input" type="text" name="rut" id="rut" placeholder="ingrese su rut" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">rut invalido, el rut no debe llevar guiones, maximo 9 digitos</p>
+            </div>
+
+            <!--Grupo Correo-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <div class="formulario__grupo-input">
+                    <input class="info formulario__input" type="text" name="correo" id="correo" placeholder="ingrese su correo" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">correo invalido, reingrese correo valido: ejemplo_de@correo.com</p>
+            </div>
+
+
+            <!-- <input class="info" type="text" name="alias" id="Alias" placeholder="Ingrese su Alias"> 
             <input class="info" type="text" name="rut" id="Rut" placeholder="Ingrese su Rut"> 
-            <input class="info" type="email" name="email" id="email" placeholder="Ingrese su Correo">
+            <input class="info" type="email" name="email" id="email" placeholder="Ingrese su Correo"> -->
             <select class="select" name="Region" id="region" required>
                 <option selected hidden value="">Región</option>
                 <option value="5">V Region </option>
@@ -106,7 +142,7 @@
     </section>
     
     
-
+    <script src="https://kit.fontawesome.com/5b98485d0c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
