@@ -7,142 +7,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleDog.css">
-    <title>Document</title>
+    <title>Votaciónes</title>
 </head>
 
 <body>
-    
-    <title>Formulario de Votación</title>
-    <section class="register">
+    <main>
         
-
-
-        <form action="formulario.php" method="POST">
-            <h4>Formulario votación</h4>
-            <!--Grupo Nombre-->
-            <div class="formulario__grupo" id="grupo__nombre">
-                <div class="formulario__grupo-input">
-                    <input class="info formulario__input" type="text" name="nombre" id="nombres" placeholder="Nombre completo" required>
-                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        <section class="register">
+            <h4 class="formulario__label">Formulario votación</h4>
+    
+    
+            <form action="formulario.php" method="POST" class="formulario" id="formulario">
+                
+                <!--Grupo Nombre-->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <input class="info formulario__input" type="text" name="nombre" id="nombres" placeholder="Nombre completo" required>
+                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario__input-error">el nombre puede tener de 4 a 16 digitos y solo puede contener letras y espacios.</p>
                 </div>
-                <p class="formulario__input-error">el nombre puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
-            </div>
-
-            <!--Grupo Alias-->
-            <div class="formulario__grupo" id="grupo__alias">
-                <div class="formulario__grupo-input">
-                    <input class="info formulario__input" type="text" name="alias" id="alias" placeholder="ingrese su alias" required>
-                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+    
+                <!--Grupo Alias-->
+                <div class="formulario__grupo" id="grupo__alias">
+                    <div class="formulario__grupo-input">
+                        <input class="info formulario__input" type="text" name="alias" id="alias" placeholder="ingrese su alias" required>
+                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario__input-error">el alias puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
                 </div>
-                <p class="formulario__input-error">el alias puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
-            </div>
-
-            <!--Grupo Rut-->
-            <div class="formulario__grupo" id="grupo__rut">
-                <div class="formulario__grupo-input">
-                    <input class="info formulario__input" type="text" name="rut" id="rut" placeholder="ingrese su rut" required>
-                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+    
+                <!--Grupo Rut-->
+                <div class="formulario__grupo" id="grupo__rut">
+                    <div class="formulario__grupo-input">
+                        <input class="info formulario__input" type="text" name="rut" id="rut" placeholder="ingrese su rut" required>
+                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario__input-error">rut invalido, el rut no debe llevar guiones, maximo 9 digitos</p>
                 </div>
-                <p class="formulario__input-error">rut invalido, el rut no debe llevar guiones, maximo 9 digitos</p>
-            </div>
-
-            <!--Grupo Correo-->
-            <div class="formulario__grupo" id="grupo__correo">
-                <div class="formulario__grupo-input">
-                    <input class="info formulario__input" type="text" name="correo" id="correo" placeholder="ingrese su correo" required>
-                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+    
+                <!--Grupo Correo-->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <div class="formulario__grupo-input">
+                        <input class="info formulario__input" type="text" name="correo" id="correo" placeholder="ingrese su correo" required>
+                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario__input-error">correo invalido, reingrese correo valido: ejemplo_de@correo.com</p>
                 </div>
-                <p class="formulario__input-error">correo invalido, reingrese correo valido: ejemplo_de@correo.com</p>
+    
+    
+                <!-- <input class="info" type="text" name="alias" id="Alias" placeholder="Ingrese su Alias"> 
+                <input class="info" type="text" name="rut" id="Rut" placeholder="Ingrese su Rut"> 
+                <input class="info" type="email" name="email" id="email" placeholder="Ingrese su Correo"> -->
+    
+                <div class="formulario__grupo-select" id="grupo__region">
+                        <!-- <select class="select" name="Region" id="region" required> -->
+                        <select class="formulario__select" name="Region" id="region" required>
+                            <option selected hidden value="">Región</option>
+                            <option value="5">V Region </option>
+                            <option value="M">Metropolitana</option>
+                        </select>
+                </div>
+                <div class="formulario__grupo-select" id="grupo__comuna">
+                        <select class="formulario__select" name="comuna" id="comuna" required>
+                            <option selected hidden value="">Comuna</option>
+                            <option value="quilpue">Quilpue</option>
+                            <option value="viña">Viña del mar</option>
+                            <option value="valpo">valparaiso</option>
+                        </select>
+                </div>
+                <div class="formulario__grupo-select" id="grupo__candidato">
+                        <select class="formulario__select" name="candidato" id="candidato" required>
+                            <option selected hidden value="">Candidato</option>
+                            <option value="pedro">Pedro piedra</option>
+                            <option value="pablo">Pablo picapiedra</option>
+                            <option value="salmon">Salmon contra corriente</option>
+                        </select>
+                </div>
+                <div class="formulario__grupo-nosotros" id="grupo__nosotros">
+                    <p>Como se enteró de nosotros</p>
+                    <label class="formulario__label">
+                        <input class="radio" type="radio" name="referencia" value="web">Web
+                        <input class="radio" type="radio" name="referencia" value="Ly">TV 
+                        <input class="radio" type="radio" name="referencia" value="rrss">RRSS
+                        <input class="radio" type="radio" name="referencia" value="amigo">Amigo
+                    </label>
+    
+                </div>
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+    
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Votar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Votacion enviada exitosamente!</p>
+                </div>
+            </form>
+            <!-- perrito -->
+            <div class="loading">
+                <div class="loading__dog">
+                    <div class="mechones">
+                        <div class="mechon"></div>
+                        <div class="mechon"></div>
+                    </div>
+                    <div class="cabeza">
+                        <div class="cabeza__bg">
+                            <div class="cabeza__mancha"></div>
+                        </div>
+                        <div class="cabeza__bg"></div>
+                        <div class="cabeza__bg"></div>
+                        <div class="cabeza__ojos">
+                            <div class="cabeza__ojo">
+                                <div class="cabeza__retina"></div>
+                            </div>
+                            <div class="cabeza__ojo">
+                                <div class="cabeza__retina"></div>
+                            </div>
+                        </div>
+                        <div class="cabeza__nariz">
+                            <div class="cabeza__bgnariz"></div>
+                            <div class="cabeza__bgnariz"></div>
+                            <div class="cabeza__bgnariz"></div>
+                            <div class="cabeza__bgnariz"></div>
+                            <div class="cabeza__bgnariz"></div>
+                        </div>
+                    </div>
+                    <div class="lengua"></div>
+                    <div class="orejas">
+                        <div class="oreja">
+                            <div class="oreja__entrada"></div>
+                            <div class="oreja__salida"></div>
+                        </div>
+                        <div class="oreja">
+                            <div class="oreja__entrada"></div>
+                            <div class="oreja__salida"></div>
+                        </div>
+                    </div>
+                    <div class="cuerpo">
+                        <div class="cuerpo__cuello">
+                        </div>
+                        <div class="cuerpo__nuca"></div>
+                        <div class="cuerpo__espalda"></div>
+                        <div class="cuerpo__patatrasera"></div>
+                        <div class="cuerpo__panza"></div>
+                        <div class="cuerpo__pecho"></div>
+                        <div class="cuerpo__patita"></div>
+                        <div class="cuerpo__cola"></div>
+                    </div>
+                </div>
             </div>
-
-
-            <!-- <input class="info" type="text" name="alias" id="Alias" placeholder="Ingrese su Alias"> 
-            <input class="info" type="text" name="rut" id="Rut" placeholder="Ingrese su Rut"> 
-            <input class="info" type="email" name="email" id="email" placeholder="Ingrese su Correo"> -->
-            <select class="select" name="Region" id="region" required>
-                <option selected hidden value="">Región</option>
-                <option value="5">V Region </option>
-                <option value="M">Metropolitana</option>
-            </select>
-            <select class="select" name="comuna" id="comuna" required>
-                <option selected hidden value="">Comuna</option>
-                <option value="quilpue">Quilpue</option>
-                <option value="viña">Viña del mar</option>
-                <option value="valpo">valparaiso</option>
-            </select>
-            <select class="select" name="candidato" id="candidato" required>
-                <option selected hidden value="">Candidato</option>
-                <option value="pedro">Pedro piedra</option>
-                <option value="pablo">Pablo picapiedra</option>
-                <option value="salmon">Salmon contra corriente</option>
-            </select>
-            <p>Como se enteró de nosotros</p>
-            <label>
-                <input class="radio" type="radio" name="referencia" value="web">Web
-                <input class="radio" type="radio" name="referencia" value="Ly">TV 
-                <input class="radio" type="radio" name="referencia" value="rrss">RRSS
-                <input class="radio" type="radio" name="referencia" value="amigo">Amigo
-            </label>
-            <input class="botons" type="submit" value="votar" name="votar">
-        </form>
+    
+        </section>
         
-        <div class="loading">
-            <div class="loading__dog">
-                <div class="mechones">
-                    <div class="mechon"></div>
-                    <div class="mechon"></div>
-                </div>
-                <div class="cabeza">
-                    <div class="cabeza__bg">
-                        <div class="cabeza__mancha"></div>
-                    </div>
-                    <div class="cabeza__bg"></div>
-                    <div class="cabeza__bg"></div>
-                    <div class="cabeza__ojos">
-                        <div class="cabeza__ojo">
-                            <div class="cabeza__retina"></div>
-                        </div>
-                        <div class="cabeza__ojo">
-                            <div class="cabeza__retina"></div>
-                        </div>
-                    </div>
-                    <div class="cabeza__nariz">
-                        <div class="cabeza__bgnariz"></div>
-                        <div class="cabeza__bgnariz"></div>
-                        <div class="cabeza__bgnariz"></div>
-                        <div class="cabeza__bgnariz"></div>
-                        <div class="cabeza__bgnariz"></div>
-                    </div>
-                </div>
-                <div class="lengua"></div>
-                <div class="orejas">
-                    <div class="oreja">
-                        <div class="oreja__entrada"></div>
-                        <div class="oreja__salida"></div>
-                    </div>
-                    <div class="oreja">
-                        <div class="oreja__entrada"></div>
-                        <div class="oreja__salida"></div>
-                    </div>
-                </div>
-                <div class="cuerpo">
-                    <div class="cuerpo__cuello">
-                    </div>
-                    <div class="cuerpo__nuca"></div>
-                    <div class="cuerpo__espalda"></div>
-                    <div class="cuerpo__patatrasera"></div>
-                    <div class="cuerpo__panza"></div>
-                    <div class="cuerpo__pecho"></div>
-                    <div class="cuerpo__patita"></div>
-                    <div class="cuerpo__cola"></div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    
-    
-    <script src="https://kit.fontawesome.com/5b98485d0c.js" crossorigin="anonymous"></script>
+        
+        <script src="https://kit.fontawesome.com/5b98485d0c.js" crossorigin="anonymous"></script>
+    </main>
 </body>
 
 </html>
