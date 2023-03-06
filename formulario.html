@@ -11,48 +11,55 @@
 </head>
 
 <body>
+    <div>
+        <h1>u78h</h1>
+        <?php
+            include("formulario.php");
+        ?>
+
+    </div>
     <main>
         
         <section class="register">
             <h4 class="formulario__label">Formulario votación</h4>
+            
     
-    
-            <form action="formulario.php" method="POST" class="formulario" id="formulario">
+            <form action="php/formulario.php" method="POST" class="formulario" id="formulario">
                 
                 <!--Grupo Nombre-->
                 <div class="formulario__grupo" id="grupo__nombre">
                     <div class="formulario__grupo-input">
                         <input class="info formulario__input" type="text" name="nombre" id="nombres" placeholder="Nombre completo" required>
-                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        <i class="formulario__validacion-estado fa-solid fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">el nombre puede tener de 4 a 16 digitos y solo puede contener letras y espacios.</p>
+                    <p class="formulario__input-error">El nombre puede tener de 4 a 16 digitos y solo puede contener letras y espacios.</p>
                 </div>
     
                 <!--Grupo Alias-->
                 <div class="formulario__grupo" id="grupo__alias">
                     <div class="formulario__grupo-input">
                         <input class="info formulario__input" type="text" name="alias" id="alias" placeholder="ingrese su alias" required>
-                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        <i class="formulario__validacion-estado fa-solid fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">el alias puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+                    <p class="formulario__input-error">El alias puede tener de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo, no lleva espacio.</p>
                 </div>
     
                 <!--Grupo Rut-->
                 <div class="formulario__grupo" id="grupo__rut">
                     <div class="formulario__grupo-input">
                         <input class="info formulario__input" type="text" name="rut" id="rut" placeholder="ingrese su rut" required>
-                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        <i class="formulario__validacion-estado fa-solid fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">rut invalido, el rut no debe llevar guiones, maximo 9 digitos</p>
+                    <p class="formulario__input-error">Rut invalido, el rut debe llevar un guion y estar sin puntos, maximo 10 digitos</p>
                 </div>
     
                 <!--Grupo Correo-->
                 <div class="formulario__grupo" id="grupo__correo">
                     <div class="formulario__grupo-input">
                         <input class="info formulario__input" type="text" name="correo" id="correo" placeholder="ingrese su correo" required>
-                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        <i class="formulario__validacion-estado fa-solid fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">correo invalido, reingrese correo valido: ejemplo_de@correo.com</p>
+                    <p class="formulario__input-error">Correo invalido, reingrese correo valido: ejemplo_de@correo.com</p>
                 </div>
     
     
@@ -87,10 +94,10 @@
                 <div class="formulario__grupo-nosotros" id="grupo__nosotros">
                     <p>Como se enteró de nosotros</p>
                     <label class="formulario__label">
-                        <input class="radio" type="radio" name="referencia" value="web">Web
-                        <input class="radio" type="radio" name="referencia" value="Ly">TV 
-                        <input class="radio" type="radio" name="referencia" value="rrss">RRSS
-                        <input class="radio" type="radio" name="referencia" value="amigo">Amigo
+                        <input class="checkbox" type="checkbox" name="referencia" value="web">Web
+                        <input class="checkbox" type="checkbox" name="referencia" value="tv">TV 
+                        <input class="checkbox" type="checkbox" name="referencia" value="rrss">RRSS
+                        <input class="checkbox" type="checkbox" name="referencia" value="amigo">Amigo
                     </label>
     
                 </div>
@@ -103,6 +110,9 @@
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Votacion enviada exitosamente!</p>
                 </div>
             </form>
+
+            
+
             <!-- perrito -->
             <div class="loading">
                 <div class="loading__dog">
@@ -159,7 +169,7 @@
     
         </section>
         
-        
+        <script src="js/formulario.js"></script>
         <script src="https://kit.fontawesome.com/5b98485d0c.js" crossorigin="anonymous"></script>
     </main>
 </body>
